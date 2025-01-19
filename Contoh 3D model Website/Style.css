@@ -1,0 +1,73 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Wrapper container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Enables responsiveness */
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Text section */
+.text-section {
+    flex: 1;
+    min-width: 300px;
+    /* Ensures it adjusts on smaller screens */
+}
+
+.text-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text-section p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 3D model section */
+.model-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+model-viewer {
+    width: 100%;
+    max-width: 400px;
+    /* Limit size on larger screens */
+    height: 400px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* Stacks content vertically */
+        text-align: center;
+        /* Centers text on mobile */
+    }
+
+    model-viewer {
+        height: 300px;
+        /* Smaller size for mobile */
+    }
+}
